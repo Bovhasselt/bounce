@@ -35,12 +35,17 @@ class MyAppState extends ChangeNotifier {
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var appState = context.watch<MyAppState>();
-
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 0, 0, 0),
+      backgroundColor: Color.fromARGB(255, 1, 7, 126),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        title: Text(
+          'BOUNCE',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Color.fromARGB(255, 0, 4, 57),
         actions: [
           Icon(
             size: 33.5,
@@ -49,30 +54,35 @@ class MyHomePage extends StatelessWidget {
           )
         ],
       ),
-      body: Column(
-        children: [
-          Text('A Kanker goed idea:'),
-          Text(appState.current.asLowerCase),
+      floatingActionButton: Wrap(
+        direction: Axis.horizontal,
+        children: <Widget>[
+          FloatingActionButton(
+            shape: CircleBorder(),
+            backgroundColor: Colors.white,
+            elevation: 10.0,
+            child: const Icon(Icons.settings),
+            onPressed: () async {
+              // Open settings
+              // await showDialog(context: context, builder: (_) => QrDialog());
+            },
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 245),
+            child: FloatingActionButton(
+              shape: CircleBorder(),
+              backgroundColor: Colors.white,
+              elevation: 10.0,
+              child: const Icon(Icons.crop_free),
+              onPressed: () async {
+                // Open qr scan
+                // await showDialog(context: context, builder: (_) => QrDialog());
+              },
+            ),
+          ),
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        shape: CircleBorder(),
-        backgroundColor: Colors.white,
-        elevation: 10.0,
-        child: const Icon(Icons.qr_code_2),
-        onPressed: () async {
-          await showDialog(context: context, builder: (_) => QrDialog());
-        },
       ),
     );
   }
 }
 
-class QrDialog extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Dialog(
-      child: QRCode(),
-    );
-  }
-}
