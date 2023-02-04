@@ -24,16 +24,19 @@ class SettingsScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                margin: EdgeInsets.all(15),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
-                color: Colors.grey,
-                child: Container(
-                  margin: EdgeInsets.all(10),
-                  child: Text(
-                    '20m',
-                    style: TextStyle(color: Colors.white, fontSize: 35),
+              Flexible(
+                child: Card(
+                  margin: EdgeInsets.all(15),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  color: Colors.grey,
+                  child: Container(
+                    margin: EdgeInsets.all(10),
+                    child: TextFormField(
+                      initialValue: '20',
+                      style: TextStyle(color: Colors.white, fontSize: 35),
+                      keyboardType: TextInputType.number,
+                    ),
                   ),
                 ),
               )
