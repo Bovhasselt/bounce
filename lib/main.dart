@@ -74,8 +74,7 @@ class QrDialog extends StatelessWidget {
         height: 400.0,
         width: 400.0,
         decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/qr.png'), fit: BoxFit.cover)),
+            image: DecorationImage(image: Image.file(), fit: BoxFit.cover)),
       ),
     );
   }
