@@ -2,6 +2,8 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'qrcode.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -70,13 +72,7 @@ class QrDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      child: Container(
-        height: 400.0,
-        width: 400.0,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/qr.png'), fit: BoxFit.cover)),
-      ),
+      child: QRCode(),
     );
   }
 }
