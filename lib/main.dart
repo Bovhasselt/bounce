@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'OpenSans',
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Theme.of(context).copyWith().colorScheme.secondary))),
+                  color: Theme.of(context).copyWith().colorScheme.secondary),
+              iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 0, 0)))),
       home: ClubsideHomePage(),
     );
   }

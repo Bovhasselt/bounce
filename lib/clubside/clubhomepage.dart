@@ -1,15 +1,17 @@
+import 'qrscannerscreen.dart';
 import 'package:flutter/material.dart';
 import 'settingsscreen.dart';
 
-class ClubsideHomePage extends StatefulWidget {
-  @override
-  State<ClubsideHomePage> createState() => _ClubsideHomePageState();
-}
-
-class _ClubsideHomePageState extends State<ClubsideHomePage> {
+class ClubsideHomePage extends StatelessWidget {
   void selectSettings(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
       return SettingsScreen();
+    }));
+  }
+
+  void selectQRScanner(BuildContext ctx) {
+    Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
+      return QRViewExample();
     }));
   }
 
@@ -64,10 +66,7 @@ class _ClubsideHomePageState extends State<ClubsideHomePage> {
               foregroundColor: Theme.of(context).colorScheme.secondary,
               shape: CircleBorder(),
               elevation: 10.0,
-              onPressed: () async {
-                // Open qr scan
-                // await showDialog(context: context, builder: (_) => QrDialog());
-              },
+              onPressed: () => selectQRScanner(context),
               child: const Icon(Icons.crop_free),
             ),
           ),
