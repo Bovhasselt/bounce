@@ -35,21 +35,17 @@ class _ClubsideHomePageState extends State<ClubsideHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 1, 7, 126),
+      backgroundColor: Theme.of(context).colorScheme.secondary,
       appBar: AppBar(
         title: Text(
           'BOUNCE',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
+          style: Theme.of(context).textTheme.titleLarge,
         ),
-        backgroundColor: Color.fromARGB(255, 0, 4, 57),
         actions: [
           Icon(
             size: 33.5,
             Icons.account_circle_outlined,
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.secondary,
           )
         ],
       ),
@@ -61,7 +57,8 @@ class _ClubsideHomePageState extends State<ClubsideHomePage> {
         children: <Widget>[
           FloatingActionButton(
             shape: CircleBorder(),
-            backgroundColor: Colors.white,
+            backgroundColor: Theme.of(context).colorScheme.primary,
+            foregroundColor: Theme.of(context).colorScheme.secondary,
             elevation: 10.0,
             onPressed: _selectedScreenIndex == 1
                 ? _onCrossButtonTapped
@@ -73,8 +70,9 @@ class _ClubsideHomePageState extends State<ClubsideHomePage> {
           Container(
             margin: EdgeInsets.only(left: 245),
             child: FloatingActionButton(
+              backgroundColor: Theme.of(context).colorScheme.primary,
+              foregroundColor: Theme.of(context).colorScheme.secondary,
               shape: CircleBorder(),
-              backgroundColor: Colors.white,
               elevation: 10.0,
               onPressed: () async {
                 // Open qr scan

@@ -1,4 +1,4 @@
-name: Rook 
+name: bounce
 description: A new Flutter project.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -27,3 +27,15 @@ flutter:
 
 assets:
   -assets/qr.png
+
+fonts:
+- family: OpenSans
+  fonts:
+    - asset: assets/fonts/OpenSans-Regular.ttf
+    - asset: assets/fonts/OpenSans-Bold.ttf
+      weight: 700
+- family: Quicksand
+  fonts:
+    - asset: assets/fonts/Quicksand-Regular.ttf
+    - asset: assets/fonts/Quicksand-Bold.ttf
+      weight: 700

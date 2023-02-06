@@ -32,8 +32,11 @@ class SettingsScreen extends StatelessWidget {
                   color: Colors.grey,
                   child: Container(
                     margin: EdgeInsets.all(10),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
                     child: TextFormField(
                       initialValue: '20',
+                      textAlign: TextAlign.end,
+                      decoration: InputDecoration(isCollapsed: true),
                       style: TextStyle(color: Colors.white, fontSize: 35),
                       keyboardType: TextInputType.number,
                     ),
@@ -59,16 +62,22 @@ class SettingsScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                margin: EdgeInsets.all(15),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
-                color: Colors.grey,
-                child: Container(
-                  margin: EdgeInsets.all(10),
-                  child: Text(
-                    '-2m',
-                    style: TextStyle(color: Colors.white, fontSize: 35),
+              Flexible(
+                child: Card(
+                  margin: EdgeInsets.all(15),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  color: Colors.grey,
+                  child: Container(
+                    margin: EdgeInsets.all(10),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: TextFormField(
+                      initialValue: '2',
+                      textAlign: TextAlign.end,
+                      decoration: InputDecoration(isCollapsed: true),
+                      style: TextStyle(color: Colors.white, fontSize: 35),
+                      keyboardType: TextInputType.number,
+                    ),
                   ),
                 ),
               )
@@ -91,16 +100,22 @@ class SettingsScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                margin: EdgeInsets.all(15),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
-                color: Colors.grey,
-                child: Container(
-                  margin: EdgeInsets.all(10),
-                  child: Text(
-                    '20m',
-                    style: TextStyle(color: Colors.white, fontSize: 35),
+              Flexible(
+                child: Card(
+                  margin: EdgeInsets.all(15),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  color: Colors.grey,
+                  child: Container(
+                    margin: EdgeInsets.all(10),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: TextFormField(
+                      initialValue: '50',
+                      textAlign: TextAlign.end,
+                      decoration: InputDecoration(isCollapsed: true),
+                      style: TextStyle(color: Colors.white, fontSize: 35),
+                      keyboardType: TextInputType.number,
+                    ),
                   ),
                 ),
               )
