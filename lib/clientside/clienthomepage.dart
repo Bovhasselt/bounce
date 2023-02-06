@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import '../qrcode.dart';
 
 class ClientHomePage extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 0, 0, 0),
       appBar: AppBar(
